@@ -37,8 +37,7 @@ shift # past argument or value
 done
 
 
-mv /var/www/html/restore/$CONFFILE /etc/openvpn/server.conf 2>&1
+mv /var/www/html/restore/$CONFFILE /etc/openvpn/server/server.conf 2>&1
 
 echo "Done."
 exit 0
-

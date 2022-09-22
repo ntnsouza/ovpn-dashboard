@@ -1,5 +1,5 @@
 #!/bin/bash
 #
-result="$( ls /etc/openvpn/ccd | wc -l  )"
+result="$( ls /etc/openvpn/client | wc -l  )"
 
 echo $result

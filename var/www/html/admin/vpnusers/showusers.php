@@ -2,7 +2,7 @@
 <?php
 $users= array();
 
-exec('/bin/ls /etc/openvpn/ccd', $users);
+exec('/bin/ls /etc/openvpn/client', $users);
 
 $hostname = shell_exec('hostname');
 $date = shell_exec('date "+%A %W %Y %X"');
@@ -39,16 +39,16 @@ $pageTitle = "Peer overview";
 				echo '<li><a href="/admin/vpnusers/userdetails?username='.$user.'">';
 				echo $user;
 				echo '</a></li>';
-			}?>			
-			
+			}?>
+
 		  </ul>
 		  <a class="btn btn-default dropdown-toggle" role="button" id="dropdownMenu1" href="/admin/vpnusers/adduser">Add new peer</a>
-			
+
 		</div>
 
 		<br>
-		
-		  
+
+
 			<br>
 		<?php foreach ($users as &$user)
 			{
@@ -71,12 +71,12 @@ $pageTitle = "Peer overview";
 				echo "</div>";
 				}
 			}
-		
+
 		?>
 		<br>
 
 		</div>
-	
+
 	</div>
 </div>
 	</div>

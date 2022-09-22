@@ -1,5 +1,4 @@
 #!/bin/bash
-#
 
 not_root() {
     echo "ERROR: You have to be root to execute this script"
@@ -8,14 +7,8 @@ not_root() {
 
 : ${1?"Usage: $0 -c name -p PEMfile"}
 
-
-
-
-
-
 # Check if user is root
 [ $EUID != 0 ] && not_root
-
 
 while [[ $# -gt 1 ]]
 do
@@ -30,12 +23,11 @@ case $key in
     PEMFILE="$2"
     shift # past argument
     ;;
-	
     --default)
     DEFAULT=YES
     ;;
     *)
-            # unknown option
+    # unknown option
     ;;
 esac
 shift # past argument or value
